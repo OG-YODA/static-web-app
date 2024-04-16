@@ -12,25 +12,13 @@ html{
     vertical-align: baseline;
 }
 
-header nav.socials {
-    width: auto;
-    
-    margin-left: 10px;
-    padding-top: 10px;
-}
-
-header nav.outer h1 {
-    padding-top: 10px;
-    font-size: 50px;
-    padding-bottom: 10px;
-}
-
 body{
     font-family: Futura Display !important;
     letter-spacing: .1rem;
     background-color: #000;
     color: #D0E0F0;
     text-align: center;
+    line-height: 1;
 }
 h1{
     margin-bottom: 0px;
@@ -47,29 +35,61 @@ a{
 a:hover{
     color: #ffffff;
 }
-header{
-}
-h1{
-    padding-top: 30px;
-    font-size: 50px;
-    padding-bottom: 15px;
-}
+
 footer{
     font-size: 9px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-transform: uppercase;
-    line-height: 140%;
+    align-self: center;
+    order: 1;
+    position: absolute;
 }
 
-nav.socials{
+#container{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    order: 0;
+}
+
+.socials {
+    width: auto;
     padding-top: 8px;
     margin-bottom: 15px;
+    margin-left: 1%;
 }
-nav.socials a{
+
+.socials a{
     font-size: 20px;
 }
 
+.main {
+    width: auto;
+    align-self: auto;
+    order: 1;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.outer{
+    align-self: flex-end;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: auto;
+    flex-shrink: 1;
+}
+
+.outer h1 {
+    padding-top: 10px;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
 
 .button{
     background-color: #D0E0F0;
@@ -90,3 +110,27 @@ nav.socials a{
     background-color: #000;
     color: #D0E0F0;
 }
+
+.carousel {
+    position: relative;
+    flex: 1;
+    margin: 0 auto; 
+    width: 70%;
+    margin-top: 5%;
+  }
+  
+.carousel__image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+.carousel__image.active {
+    opacity: 1;
+  }
+  
