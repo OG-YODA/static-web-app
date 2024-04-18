@@ -1,3 +1,6 @@
+const carouselItems = document.querySelectorAll('.carousel-item');
+const button1 = document.querySelectorAll('button1');
+const button2 = document.querySelectorAll('button2');
 document.addEventListener("DOMContentLoaded", function () {
     var images = document.querySelectorAll('.carousel__image');
     var currentIndex = 0;
@@ -14,4 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     setInterval(switchImage, 5000); // Переключение каждые 5 секунд
+     switch(currentIndex){
+      case 0 : 
+     }
   });
+
