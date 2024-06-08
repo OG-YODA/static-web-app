@@ -17,7 +17,7 @@ html{
 }
 
 body{
-    font-family: Futura Display !important;
+    font-family: Futura Display;
     letter-spacing: .1rem;
     background-color: #000;
     color: #D0E0F0;
@@ -26,9 +26,10 @@ body{
 }
 h1{
     margin-bottom: 0px;
+    font-size: large;
 }
 h2{
-    margin-bottom: 15px;
+    margin-bottom: 5%;
 }
 a{
     color: #D0E0F0;
@@ -43,13 +44,14 @@ a:hover{
 footer{
     font-size: 9px;
     align-self: center;
-    order: 1;
-    position: absolute;
+    bottom: 0;
+    padding: 1%;
 }
 
 #container{
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 header{
@@ -59,7 +61,6 @@ header{
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
-    order: 0;
 }
 
 .socials {
@@ -95,33 +96,46 @@ header{
     padding-bottom: 10px;
 }
 
-.button{
+.buttons {
+    margin-top: 15px; /* Отступ сверху кнопок */
+    margin-bottom: 15px; /* Отступ снизу кнопок */
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+button {
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: #D0E0F0;
     color: #000;
+    font-family: inherit;
     border: 2px solid #D0E0F0;
-    display: inline-block;
-    padding: 7px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 7px 10px;
     transition: all 0.3s;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 110%;
-    margin-bottom: 10px;
-    margin-left: 3px;
-    margin-right: 3px;
 }
-.button:hover{
+
+button:hover{
     background-color: #000;
     color: #D0E0F0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 10px); /* 100px - примерная высота карусели */
 }
 
 .carousel {
     position: relative;
     flex: 1;
-    margin: 0 auto; 
+    margin: 0 auto;
     width: 70%;
     margin-top: 5%;
-  }
+    margin-bottom: 30px; /* Увеличиваем отступ снизу карусели */
+}
   
 .carousel__image {
     position: absolute;
@@ -138,3 +152,35 @@ header{
     opacity: 1;
   }
   
+#navigation-list{
+    text-align: start;
+    font-size: 1.25rem;
+    margin-left: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+} 
+
+.article{
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: normal;
+}
+
+.article h2{
+    text-align: center;
+    margin-left: auto;
+    margin-top: 5%;
+}
+
+.article h3{
+    margin-left: 4%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+p{
+    text-indent: 20px; 
+}
